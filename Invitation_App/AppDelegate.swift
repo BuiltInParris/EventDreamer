@@ -9,14 +9,28 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-                            
-    var window: UIWindow?
 
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var window: UIWindow?
+    var viewController: UIViewController?
+    
+    var ContactData : NSMutableArray?
+    
+    
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+        /*self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         // Override point for customization after application launch.
-        return true
+        
+        var sb = UIStoryboard(name: "Main",
+        bundle:nil)
+
+        self.viewController = sb.instantiateViewControllerWithIdentifier("ESIGY") as? UIViewController
+
+        self.window!.rootViewController = self.viewController;
+        self.window!.makeKeyAndVisible()
+        */return true
     }
 
     func applicationWillResignActive(application: UIApplication!) {

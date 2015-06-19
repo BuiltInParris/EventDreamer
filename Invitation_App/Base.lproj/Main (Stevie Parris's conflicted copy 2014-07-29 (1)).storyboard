@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aCl-Vo-GBZ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+    </dependencies>
+    <scenes>
+        <!--E-Signature-->
+        <scene sceneID="vw0-at-LEc">
+            <objects>
+                <viewController title="E-Signature" id="aCl-Vo-GBZ" customClass="ESIG" customModule="Invitation_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JQr-l0-Qf3"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Vh-I4-AWj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" placeholderIntrinsicWidth="280" placeholderIntrinsicHeight="90" id="SgB-hA-tWk" userLabel="Signature View 1" customClass="SignatureView">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fR0-m5-7IH">
+                                <rect key="frame" x="224" y="375" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="5W3-uw-80K" kind="popoverPresentation" popoverAnchorView="fR0-m5-7IH" id="pip-6U-V0x">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ksb-CU-pAZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-732" y="646"/>
+        </scene>
+        <!--Signature View Controller-->
+        <scene sceneID="Ba2-Ss-LdA">
+            <objects>
+                <viewController storyboardIdentifier="ESIGY" id="5W3-uw-80K" customClass="SignatureViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gE5-jW-a9v"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ym1-Lc-K25"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vTh-CY-1bV">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ksy-44-01W" customClass="SignatureView">
+                                <rect key="frame" x="85" y="191" width="310" height="97"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="       Sign Here" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dJH-de-cFd">
+                                        <rect key="frame" x="0.0" y="0.0" width="310" height="97"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrc-ev-WxU">
+                                <rect key="frame" x="253" y="319" width="142" height="44"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="1" height="0.0"/>
+                                <state key="normal" title="Sign">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signatureSignTapped:" destination="5W3-uw-80K" eventType="touchUpInside" id="r6b-3f-Xka"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvU-fj-2UL">
+                                <rect key="frame" x="85" y="319" width="160" height="44"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <size key="titleShadowOffset" width="1" height="0.0"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signatureClearTapped:" destination="5W3-uw-80K" eventType="touchUpInside" id="n3k-oo-63p"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="clearButton" destination="vvU-fj-2UL" id="SgP-Ev-KmI"/>
+                        <outlet property="delegate" destination="vTh-CY-1bV" id="zdr-7e-YaC"/>
+                        <outlet property="signButton" destination="jrc-ev-WxU" id="SW6-og-4jZ"/>
+                        <outlet property="signatureTextField" destination="dJH-de-cFd" id="OcK-C1-FAw"/>
+                        <outlet property="view" destination="Ksy-44-01W" id="YAL-Mc-HcI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IJm-Ar-1IQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-739" y="1251"/>
+        </scene>
+    </scenes>
+</document>
